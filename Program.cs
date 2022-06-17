@@ -215,18 +215,78 @@
 
 // Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
 
-void resultOfDivision(int a, int b){
-    if (a*a==b){
-        Console.WriteLine(b + " квадрат "  + a );
-    }
-    else{
-    Console.WriteLine(b + " не квадрат " + a );
-    }
-}
+// void resultOfDivision(int a, int b){
+//     if (a*a==b){
+//         Console.WriteLine(b + " квадрат "  + a );
+//     }
+//     else{
+//     Console.WriteLine(b + " не квадрат " + a );
+//     }
+// }
 
 
-Console.WriteLine("Type int N1, N2");
-int n1 = Convert.ToInt32(Console.ReadLine());
-int n2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Type int N1, N2");
+// int n1 = Convert.ToInt32(Console.ReadLine());
+// int n2 = Convert.ToInt32(Console.ReadLine());
 
-resultOfDivision(n1,n2);
+
+
+// resultOfDivision(n1,n2);
+
+
+// HOMEWORK2
+
+// Напишите программу, которая принимает на вход трёхзначное число
+//  и на выходе показывает вторую цифру этого числа.
+
+// void result(int a){
+//     if (a > 99 && a < 1000) {
+//         Console.WriteLine(a / 10 % 10);
+//     }
+//     else {
+//     Console.WriteLine(" неверное значение ");
+//     }
+// }
+
+// Console.WriteLine("Введите 3-х значное число");
+// int n1 = Convert.ToInt32(Console.ReadLine());
+
+// result(n1);
+
+
+// Напишите программу, которая выводит третью цифру
+//  заданного числа или сообщает, что третьей цифры нет.
+
+
+
+// Console.WriteLine("Введите число");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(n>99 ? n.ToString()[2] : '-');
+// Console.ReadKey(true);
+
+
+// Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
+
+
+// void result(int a) {
+//     if (a > 1 && a > 7) {
+//         Console.WriteLine("неверное значение");
+//     }
+//     else{
+//         if (a > 5){
+//         Console.WriteLine("выходной день");
+//         }
+//         else{
+//             Console.WriteLine("рабочий день");
+//         }
+    
+//     }
+// }
+// Console.WriteLine("Номер дня");
+// int n1 = Convert.ToInt32(Console.ReadLine());
+
+// result(n1);
+
+
+    
