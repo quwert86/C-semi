@@ -1,148 +1,239 @@
 ﻿
-//  2 Seminar
-
-
-// void ShowNumber(){
-//     int num = new Random().Next(10, 100);
-//     int firstNum = num /10;
-//     int secondNum = num % 10;
-//     Console.Write(num + "->");
-//     if (firstNum > secondNum){
-//         Console.WriteLine(firstNum);
-//     }
-//     else {
-//         Console.WriteLine(secondNum);
-//     }
-// }
-
-// ShowNumber();
+    
+// Sem 3
+// Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
 
 
 
-// Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.
 
-
-
-// int NumberWithOutSecDig(int Number){   
-//     int NewNumber = Number / 100 * 10 + Number % 10;
-//     return NewNumber;
-// }
-// int Number = new Random().Next(100, 1000);
-// int res = NumberWithOutSecDig(Number);
-// Console.WriteLine(Number + "  " + res);
-
-
-// Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
-
-
-
-// void resultOfDivision(int a, int b){
-//     if (b % a==0){
-//         Console.WriteLine(b + " кратно "  + a );
-//     }
-//     else{
-//     Console.WriteLine(b + " не кратно " + a + " остаток " + b%a);
-//     }
-// }
-// Console.WriteLine("Type int N1, N2");
-// int n1 = Convert.ToInt32(Console.ReadLine());
-// int n2 = Convert.ToInt32(Console.ReadLine());
-
-// resultOfDivision(n1,n2);
-
-
-
-// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
-
-// void resultOfDivision(int a){
-//     if (a % 7 == 0 && a % 23 == 0 ){
-//         Console.WriteLine(a + " кратно " );
-//     }
-//     else{
-//     Console.WriteLine(a + " не кратно ");
-//     }
-// }
-// Console.WriteLine("Type int N1");
-// int n1 = Convert.ToInt32(Console.ReadLine());
-
-
-// resultOfDivision(n1);
-
-
-// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
-
-// void resultOfDivision(int a, int b){
-//     if (a*a==b){
-//         Console.WriteLine(b + " квадрат "  + a );
-//     }
-//     else{
-//     Console.WriteLine(b + " не квадрат " + a );
+// void getDot (int x, int y){
+//     if (x == 0 || y == 0){
+//         Console.WriteLine("Нет возможности определить четверть");
+//     }else{
+//         if(x > 0 && y > 0) 
+//             Console.WriteLine("1 четверть");
+//         if(x > 0 && y < 0)
+//             Console.WriteLine("4 четверть");
+//         if(x < 0 && y > 0) 
+//             Console.WriteLine("2 четверть");
+//         if(x < 0 && y < 0)
+//             Console.WriteLine("3 четверть");
 //     }
 // }
 
+// Console.WriteLine("Введите две точки: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// int y1 = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Type int N1, N2");
-// int n1 = Convert.ToInt32(Console.ReadLine());
-// int n2 = Convert.ToInt32(Console.ReadLine());
-
-
-
-// resultOfDivision(n1,n2);
+// getDot(x1, y1);
 
 
-// HOMEWORK2
+// Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
-// Напишите программу, которая принимает на вход трёхзначное число
-//  и на выходе показывает вторую цифру этого числа.
+// void getDot (int num){
+//     if (x == 0 || y == 0){
+//         Console.WriteLine("Нет возможности определить четверть");
+//     }else
+//     {
+//         if(num == 1) 
+//             Console.WriteLine("X > 0; Y > 0");
+//     else if(num == 2)
+//             Console.WriteLine("X < 0; Y > 0");
+//     else if(num == 3)
+//             Console.WriteLine("X < 0; Y < 0");
+//     else if(num == 4)
+//             Console.WriteLine("X < 0; Y > 0");
+//         else
+//         { Console.WriteLine("Нет возможности определить четверть");}
+//     }
+// }
+
+// Console.WriteLine("номер четверти: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+
+
+// getDot(x1);
+
+// void getDot(int q)
+// {
+//     if (q <= 0 || q > 4)
+//     {
+//         Console.WriteLine("Нет возможности определить диапазон");
+//     }
+//     else
+//     {
+//         if (q == 1)
+//             Console.WriteLine("диапазон Х > 0 и Y > 0");
+//         else if (q == 2)
+//             Console.WriteLine("диапазон Х > 0 и Y < 0");
+//         else if (q == 3)
+//             Console.WriteLine("диапазон Х < 0 и Y < 0");
+//         else
+//             Console.WriteLine("диапазон Х < 0 и Y > 0");
+//     }
+// }
+
+// Console.WriteLine("Введите четверть: ");
+// int q1 = Convert.ToInt32(Console.ReadLine());
+
+// getDot(q1);
+
+
+// 3 задача
+
+// Console.Clear();
+// double distAB(int x1,int y1,int x2,int y2){
+//     return Math.Sqrt(Math.Pow(Math.Abs((x2-x1)),2) +Math.Pow(Math.Abs((y2-y1)),2) );
+// }
+
+// Console.WriteLine("X1 = ");
+// int xA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Y1 = ");
+// int yA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("X2 = ");
+// int xB = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Y1 = ");
+// int yB = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("dist =  " + Math.Round(distAB(xA,yA,xB,yB)));
+
+// Math.Round округление
+// Math.Pow((x2-x1),2) возведение в степень 2
+// Math.Abs модуль
+
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N
+
+// void listSqrt(int n){
+//     int count = 1;
+
+//     Console.Write(n + "->");
+
+//     while (count <= n){
+//         Console.WriteLine(Math.Pow(count,2) + ",");
+//         count++;
+//     }
+
+// }
+
+// Console.WriteLine("n = ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// listSqrt(num);
+
+
+// Console.Clear();
+
+// void listSqrt(int n)
+// {
+//     int count = 1;
+
+//     Console.Write(n + "-> ");
+
+//     if (n > 0)
+//     {
+
+//         while (count <= n)
+//         {
+//             Console.Write(Math.Pow(count, 2) + ", ");
+//             count++;
+//         }
+//     }
+//     else
+//     {
+//         count = -1;
+//         while (count >= n)
+//         {
+//             Console.Write(Math.Pow(count, 2) + ", ");
+//             count--;
+//         }
+//     }
+// }
+
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// listSqrt(num);
+
+
+
+// HOMEWORK3
+
+
+
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
 // void result(int a){
-//     if (a > 99 && a < 1000) {
-//         Console.WriteLine(a / 10 % 10);
+//     if (a > 9999 && a < 100000) {
+//         if ((a % 10) == (a / 10000 % 10)){
+//             if ((a /10 % 10) == (a /1000 % 10)) {
+//                 Console.WriteLine("палиндром");
+//             }
+//             // Console.WriteLine("палиндром");
+//             else
+//         {
+//             Console.WriteLine("не палиндром");
+//         }
+//         }
+//         else
+//         {
+//             Console.WriteLine("не палиндром");
+//         }
+        
+        
 //     }
 //     else {
-//     Console.WriteLine(" неверное значение ");
+//     Console.WriteLine(" нет ");
 //     }
 // }
 
-// Console.WriteLine("Введите 3-х значное число");
+// Console.WriteLine("Введите пятизначное число");
 // int n1 = Convert.ToInt32(Console.ReadLine());
 
 // result(n1);
 
 
-// Напишите программу, которая выводит третью цифру
-//  заданного числа или сообщает, что третьей цифры нет.
+// Напишите программу, которая принимет на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-
-
-// Console.WriteLine("Введите число");
-// int n = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine(n>99 ? n.ToString()[2] : '-');
-// Console.ReadKey(true);
-
-
-// Напишите программу, которая принимает на вход цифру, 
-// обозначающую день недели, и проверяет, является ли этот день выходным.
-
-
-// void result(int a) {
-//     if (a > 1 && a > 7) {
-//         Console.WriteLine("неверное значение");
-//     }
-//     else{
-//         if (a > 5){
-//         Console.WriteLine("выходной день");
-//         }
-//         else{
-//             Console.WriteLine("рабочий день");
-//         }
-    
-//     }
+// Console.Clear();
+// double distAB(int x1,int y1,int z1,int x2,int y2,int z2){
+//     return Math.Sqrt(Math.Pow(Math.Abs((x2-x1)),2) + Math.Pow(Math.Abs((y2-y1)),2) + Math.Pow(Math.Abs((y2-y1)),2) );
 // }
-// Console.WriteLine("Номер дня");
-// int n1 = Convert.ToInt32(Console.ReadLine());
 
-// result(n1);
+// Console.WriteLine("X1 = ");
+// int xA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Y1 = ");
+// int yA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Z1 = ");
+// int zA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("X2 = ");
+// int xB = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Y1 = ");
+// int yB = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Z2 = ");
+// int zB = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("dist =  " + Math.Round(distAB(xA,yA,zA,xB,yB,zB)));
 
 
-    
+
+// Напишите программу, которая принимает на вход число (N) и выдает таблицу кубов чисел  от 1 до N.
+// 
+
+// void listSqrt(int n){
+//     int count = 1;
+
+//     Console.Write(n + "->");
+
+//     while (count <= n){
+//         Console.WriteLine(Math.Pow(count,3) + ",");
+//         count++;
+//     }
+
+// }
+
+// Console.WriteLine("n = ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// listSqrt(num);
