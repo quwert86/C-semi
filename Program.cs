@@ -1,239 +1,232 @@
 ﻿
-    
-// Sem 3
-// Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
+// SEMINAR 4
+
+// Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
 
 
-
-
-// void getDot (int x, int y){
-//     if (x == 0 || y == 0){
-//         Console.WriteLine("Нет возможности определить четверть");
-//     }else{
-//         if(x > 0 && y > 0) 
-//             Console.WriteLine("1 четверть");
-//         if(x > 0 && y < 0)
-//             Console.WriteLine("4 четверть");
-//         if(x < 0 && y > 0) 
-//             Console.WriteLine("2 четверть");
-//         if(x < 0 && y < 0)
-//             Console.WriteLine("3 четверть");
-//     }
-// }
-
-// Console.WriteLine("Введите две точки: ");
-// int x1 = Convert.ToInt32(Console.ReadLine());
-// int y1 = Convert.ToInt32(Console.ReadLine());
-
-// getDot(x1, y1);
-
-
-// Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
-
-// void getDot (int num){
-//     if (x == 0 || y == 0){
-//         Console.WriteLine("Нет возможности определить четверть");
-//     }else
-//     {
-//         if(num == 1) 
-//             Console.WriteLine("X > 0; Y > 0");
-//     else if(num == 2)
-//             Console.WriteLine("X < 0; Y > 0");
-//     else if(num == 3)
-//             Console.WriteLine("X < 0; Y < 0");
-//     else if(num == 4)
-//             Console.WriteLine("X < 0; Y > 0");
-//         else
-//         { Console.WriteLine("Нет возможности определить четверть");}
-//     }
-// }
-
-// Console.WriteLine("номер четверти: ");
-// int x1 = Convert.ToInt32(Console.ReadLine());
-
-
-// getDot(x1);
-
-// void getDot(int q)
+// int sumToNum(int num)
 // {
-//     if (q <= 0 || q > 4)
+//     int sum = 0;
+//     for (int i = 1; i <= num; i++)
 //     {
-//         Console.WriteLine("Нет возможности определить диапазон");
+//         sum += i;
 //     }
-//     else
-//     {
-//         if (q == 1)
-//             Console.WriteLine("диапазон Х > 0 и Y > 0");
-//         else if (q == 2)
-//             Console.WriteLine("диапазон Х > 0 и Y < 0");
-//         else if (q == 3)
-//             Console.WriteLine("диапазон Х < 0 и Y < 0");
-//         else
-//             Console.WriteLine("диапазон Х < 0 и Y > 0");
-//     }
+//     return sum;
 // }
 
-// Console.WriteLine("Введите четверть: ");
-// int q1 = Convert.ToInt32(Console.ReadLine());
-
-// getDot(q1);
-
-
-// 3 задача
-
-// Console.Clear();
-// double distAB(int x1,int y1,int x2,int y2){
-//     return Math.Sqrt(Math.Pow(Math.Abs((x2-x1)),2) +Math.Pow(Math.Abs((y2-y1)),2) );
-// }
-
-// Console.WriteLine("X1 = ");
-// int xA = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Y1 = ");
-// int yA = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("X2 = ");
-// int xB = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Y1 = ");
-// int yB = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("dist =  " + Math.Round(distAB(xA,yA,xB,yB)));
-
-// Math.Round округление
-// Math.Pow((x2-x1),2) возведение в степень 2
-// Math.Abs модуль
+// Console.WriteLine("Input number : ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Sum of elements is " + sumToNum(number));
 
 
 
-// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N
+// Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
 
-// void listSqrt(int n){
-//     int count = 1;
 
-//     Console.Write(n + "->");
+// int number = 5;
+// int count = 0;
+// while (number > 0)
+//     {
+//     number = number / 10 ;
+//     count++;
+//     }
 
-//     while (count <= n){
-//         Console.WriteLine(Math.Pow(count,2) + ",");
+// Console.WriteLine(count);
+
+
+// int number = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+// while (number > 0)
+//     {
+//     number = number / 10 ;
+//     count++;
+//     }
+
+// Console.WriteLine(count);
+
+// int CountNumbers(int num){
+//     int count = 0;
+//     while (num > 0){
+//         num = num / 10 ;
 //         count++;
 //     }
-
+//     return(count);
 // }
-
-// Console.WriteLine("n = ");
-// int num = Convert.ToInt32(Console.ReadLine());
-
-// listSqrt(num);
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(CountNumbers(number));
 
 
-// Console.Clear();
+// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
 
-// void listSqrt(int n)
+
+// int moleOfNum(int num)
 // {
-//     int count = 1;
-
-//     Console.Write(n + "-> ");
-
-//     if (n > 0)
+//     int mole = 1;
+//     for (int i = 1; i <= num; i++)
 //     {
-
-//         while (count <= n)
-//         {
-//             Console.Write(Math.Pow(count, 2) + ", ");
-//             count++;
-//         }
+//         mole *= i;
 //     }
-//     else
+//     return mole;
+// }
+
+// Console.WriteLine("Input number : ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Mole of elements is " + moleOfNum(number));
+
+
+// Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+
+// Случайно генерирует массив
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++){
+//         array [i] = new Random().Next(0,2);
+//     }
+//     return array;
+// }
+
+// int[] myRandomArray = CreateRandomArray(6);
+// ShowArray(myRandomArray);
+
+// Console.WriteLine();
+
+// Ввод данных в массив
+
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++){
+//         Console.Write("Input " + i +  " element: ");
+//         array [i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// Вывод массива
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++){
+//         Console.Write(array[i]+ " ");
+//     }
+// }
+
+// int[] myRandomArray = CreateRandomArray(6);
+// ShowArray(myRandomArray);
+
+// Console.WriteLine();
+
+// int[] myArray = CreateRandomArray(6);
+// ShowArray(myArray);
+
+// -------------------------------------------------
+
+// создаем массив случайных чисел, где size -- количество элементов в массиве, min -- начало диапазона генерации случайных чисел, от какого генерируем, max -- до какого генерируем
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+
+//  создаем массив из чисел, которые вводим
+// int[] CreateArray(int size)
+// {
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++)
 //     {
-//         count = -1;
-//         while (count >= n)
-//         {
-//             Console.Write(Math.Pow(count, 2) + ", ");
-//             count--;
-//         }
+//         Console.Write("Input " + i + " element: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// выводим значения элементов массива в одну строку через пробел
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++){
+//         Console.Write(array[i] + " ");
 //     }
 // }
 
-// Console.WriteLine("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-
-// listSqrt(num);
+// int[] myRandomArray = CreateRandomArray(8, 0, 1);
+// ShowArray(myRandomArray);
 
 
 
-// HOMEWORK3
+// HOMEWORK4
 
 
+// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
-// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-// void result(int a){
-//     if (a > 9999 && a < 100000) {
-//         if ((a % 10) == (a / 10000 % 10)){
-//             if ((a /10 % 10) == (a /1000 % 10)) {
-//                 Console.WriteLine("палиндром");
-//             }
-//             // Console.WriteLine("палиндром");
-//             else
-//         {
-//             Console.WriteLine("не палиндром");
-//         }
-//         }
-//         else
-//         {
-//             Console.WriteLine("не палиндром");
-//         }
-        
-        
+// int resultDegr(int a,int b){
+//     int res = 1;
+//     int i = 0;
+//     while (i < b){
+//         res = res * a;
+//         i++ ;
+  
 //     }
-//     else {
-//     Console.WriteLine(" нет ");
+//     return res;
+//     Console.WriteLine(res);
+// }
+// Console.WriteLine("Input a, Input b : ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(resultDegr(a,b));
+
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+
+// int SumDig(int n){
+//     int sum = 0;
+//     int i = 1;
+//     int temp = 1;
+//     while (n / (10*i) > 1){
+//         sum = sum + (n /(temp)%10);
+//         i++;
+//         temp = 10*i;
+
 //     }
+//     return sum;
+//     Console.WriteLine(SumDig(sum));
 // }
-
-// Console.WriteLine("Введите пятизначное число");
-// int n1 = Convert.ToInt32(Console.ReadLine());
-
-// result(n1);
-
-
-// Напишите программу, которая принимет на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-
-// Console.Clear();
-// double distAB(int x1,int y1,int z1,int x2,int y2,int z2){
-//     return Math.Sqrt(Math.Pow(Math.Abs((x2-x1)),2) + Math.Pow(Math.Abs((y2-y1)),2) + Math.Pow(Math.Abs((y2-y1)),2) );
-// }
-
-// Console.WriteLine("X1 = ");
-// int xA = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Y1 = ");
-// int yA = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Z1 = ");
-// int zA = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("X2 = ");
-// int xB = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Y1 = ");
-// int yB = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Z2 = ");
-// int zB = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("dist =  " + Math.Round(distAB(xA,yA,zA,xB,yB,zB)));
+// Console.WriteLine("Input n : ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(SumDig(n));
 
 
 
-// Напишите программу, которая принимает на вход число (N) и выдает таблицу кубов чисел  от 1 до N.
-// 
 
-// void listSqrt(int n){
-//     int count = 1;
+// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-//     Console.Write(n + "->");
 
-//     while (count <= n){
-//         Console.WriteLine(Math.Pow(count,3) + ",");
-//         count++;
-//     }
 
-// }
+int[] CreateRandomArray(int size)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++){
+        array [i] = new Random().Next(0,10);
+    }
+    return array;
+}
 
-// Console.WriteLine("n = ");
-// int num = Convert.ToInt32(Console.ReadLine());
+int[] myRandomArray = CreateRandomArray(8);
+ShowArray(myRandomArray);
 
-// listSqrt(num);
+Console.WriteLine();
+
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++){
+        Console.Write(array[i]+ " ");
+    }
+}
+
