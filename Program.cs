@@ -577,6 +577,3 @@ for (int i = 0; i < myArray.Length; i++)
         Console.WriteLine($"сумма положительных: {mole}");
     }
 }
-
-// Console.WriteLine($"сумма положительных: {sum_pos}");
-// Console.WriteLine($"сумма отрицательных: {sum_neg}");
