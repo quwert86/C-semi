@@ -1,74 +1,232 @@
-﻿// квадрат числа
-// Console.WriteLine("Type int number");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int result = num * num;
-// Console.WriteLine("result is "+ result);
+﻿
+// SEMINAR 4
+
+// Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
 
 
-
-// Напишите программу, которая на вход принимает два числа и проверяет,
-//  является ли первое число квадратом второго.
-
-// Console.WriteLine("Type int first number");
-// int num1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Type int second number");
-// int num2 = Convert.ToInt32(Console.ReadLine());
-
-// int square = num2 * num2;
-
-// if (num1 == square) {
-//     Console.WriteLine("first number is a square of second one");
-// }
-
-// else{
-//     Console.WriteLine("first number is NOT a square of second one");
-// }
-
-
-// Напишите программу, которая будет выдавать название дня недели по заданному номеру.
-
-// Console.WriteLine("Type weeks day");
-// int day = Convert.ToInt32(Console.ReadLine());
-
-// if (day < 1 || day > 7 ){
-//     Console.WriteLine("incorrect day");
-
-// }
-//  else  {
-//     if (day == 1){
-//         Console.WriteLine("monday");
+// int sumToNum(int num)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         sum += i;
 //     }
-//     if (day == 2){
-//         Console.WriteLine("tuesday");
+//     return sum;
+// }
+
+// Console.WriteLine("Input number : ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Sum of elements is " + sumToNum(number));
+
+
+
+// Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+
+
+// int number = 5;
+// int count = 0;
+// while (number > 0)
+//     {
+//     number = number / 10 ;
+//     count++;
 //     }
-//  }
+
+// Console.WriteLine(count);
 
 
-// Напишите программу, которая на вход принимает одно число (N),
-//  а на выходе показывает все целые числа в промежутке от -N до N.
+// int number = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+// while (number > 0)
+//     {
+//     number = number / 10 ;
+//     count++;
+//     }
+
+// Console.WriteLine(count);
+
+// int CountNumbers(int num){
+//     int count = 0;
+//     while (num > 0){
+//         num = num / 10 ;
+//         count++;
+//     }
+//     return(count);
+// }
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(CountNumbers(number));
 
 
-// Console.WriteLine("Type int N");
+// Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+
+
+// int moleOfNum(int num)
+// {
+//     int mole = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         mole *= i;
+//     }
+//     return mole;
+// }
+
+// Console.WriteLine("Input number : ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Mole of elements is " + moleOfNum(number));
+
+
+// Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+
+// Случайно генерирует массив
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++){
+//         array [i] = new Random().Next(0,2);
+//     }
+//     return array;
+// }
+
+// int[] myRandomArray = CreateRandomArray(6);
+// ShowArray(myRandomArray);
+
+// Console.WriteLine();
+
+// Ввод данных в массив
+
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++){
+//         Console.Write("Input " + i +  " element: ");
+//         array [i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// Вывод массива
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++){
+//         Console.Write(array[i]+ " ");
+//     }
+// }
+
+// int[] myRandomArray = CreateRandomArray(6);
+// ShowArray(myRandomArray);
+
+// Console.WriteLine();
+
+// int[] myArray = CreateRandomArray(6);
+// ShowArray(myArray);
+
+// -------------------------------------------------
+
+// создаем массив случайных чисел, где size -- количество элементов в массиве, min -- начало диапазона генерации случайных чисел, от какого генерируем, max -- до какого генерируем
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+
+//  создаем массив из чисел, которые вводим
+// int[] CreateArray(int size)
+// {
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write("Input " + i + " element: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// выводим значения элементов массива в одну строку через пробел
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++){
+//         Console.Write(array[i] + " ");
+//     }
+// }
+
+// int[] myRandomArray = CreateRandomArray(8, 0, 1);
+// ShowArray(myRandomArray);
+
+
+
+// HOMEWORK4
+
+
+// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+
+// int resultDegr(int a,int b){
+//     int res = 1;
+//     int i = 0;
+//     while (i < b){
+//         res = res * a;
+//         i++ ;
+  
+//     }
+//     return res;
+//     Console.WriteLine(res);
+// }
+// Console.WriteLine("Input a, Input b : ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(resultDegr(a,b));
+
+// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+
+// int SumDig(int n){
+//     int sum = 0;
+//     int i = 1;
+//     int temp = 1;
+//     while (n / (10*i) > 1){
+//         sum = sum + (n /(temp)%10);
+//         i++;
+//         temp = 10*i;
+
+//     }
+//     return sum;
+//     Console.WriteLine(SumDig(sum));
+// }
+// Console.WriteLine("Input n : ");
 // int n = Convert.ToInt32(Console.ReadLine());
-// int current;
-// if (n < 0){
-//     current = n;
-//     n = n *(-1);
-// }
-// else{
-//     current = -1 * n;
-// }
-
-// while(current < n-1){
-//     current++;
-//     Console.Write(current + " ");
-    
-// }
+// Console.WriteLine(SumDig(n));
 
 
-// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
 
 
-Console.WriteLine("Type int N");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(num % 10);
+// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+
+
+int[] CreateRandomArray(int size)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++){
+        array [i] = new Random().Next(0,10);
+    }
+    return array;
+}
+
+int[] myRandomArray = CreateRandomArray(8);
+ShowArray(myRandomArray);
+
+Console.WriteLine();
+
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++){
+        Console.Write(array[i]+ " ");
+    }
+}
+
