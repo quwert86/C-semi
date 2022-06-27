@@ -504,5 +504,5 @@ for (int i = 0; i < myArray.Length; i++)
     
 }
 
-Console.WriteLine($"сумма положительных: {max} {min} разность {max - min}");
+Console.WriteLine($"числа: {max} {min} разность {max - min}");
 
