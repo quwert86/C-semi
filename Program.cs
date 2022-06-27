@@ -469,6 +469,84 @@
 
 
 
+// int[] CreateRandomArray(int size, int min, int max){
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+
+
+// void ShowArray (int[] array){
+
+//     for (int i = 0; i < array.Length; i++){
+//     Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] myArray = CreateRandomArray(5, 1, 9);
+// ShowArray(myArray);
+
+// int max = myArray[0];
+// int min = myArray[0];
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     if (max < myArray[i])
+//     {
+//         max = myArray[i];
+//         }
+//     else if (min > myArray[i])
+//     {
+//         min = myArray[i];
+//         }
+    
+// }
+
+// Console.WriteLine($"числа: {max} {min} разность {max - min}");
+
+
+// Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+
+
+// int[] CreateRandomArray(int size, int min, int max){
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+
+
+// void ShowArray (int[] array){
+
+//     for (int i = 0; i < array.Length; i++){
+//     Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] myArray = CreateRandomArray(123, -200, 200);
+// // ShowArray(myArray);
+
+// int sum = 0;
+
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     if (myArray[i] > 9)
+//         if (myArray[i] < 100)
+//             sum += myArray[i];
+
+// }
+
+// Console.WriteLine($"сумма: {sum}");
+
+
+// Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+
+
 int[] CreateRandomArray(int size, int min, int max){
     int[] array = new int[size];
     for(int i = 0; i < size; i++){
@@ -486,23 +564,19 @@ void ShowArray (int[] array){
     Console.WriteLine();
 }
 
-int[] myArray = CreateRandomArray(5, 1, 9);
+int[] myArray = CreateRandomArray(5, -5, 5);
 ShowArray(myArray);
 
-int max = myArray[0];
-int min = myArray[0];
+int mole = 1;
+
 for (int i = 0; i < myArray.Length; i++)
 {
-    if (max < myArray[i])
-    {
-        max = myArray[i];
-        }
-    else if (min > myArray[i])
-    {
-        min = myArray[i];
-        }
-    
+    while (i + i < myArray.Length){
+        mole = myArray[i]* myArray[myArray.Length-i-1];
+        i ++;
+        Console.WriteLine($"сумма положительных: {mole}");
+    }
 }
 
-Console.WriteLine($"числа: {max} {min} разность {max - min}");
-
+// Console.WriteLine($"сумма положительных: {sum_pos}");
+// Console.WriteLine($"сумма отрицательных: {sum_neg}");
