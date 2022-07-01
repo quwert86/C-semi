@@ -171,7 +171,7 @@
 //     while (i < b){
 //         res = res * a;
 //         i++ ;
-  
+
 //     }
 //     return res;
 //     Console.WriteLine(res);
@@ -501,7 +501,7 @@
 //     {
 //         min = myArray[i];
 //         }
-    
+
 // }
 
 // Console.WriteLine($"числа: {max} {min} разность {max - min}");
@@ -547,33 +547,200 @@
 // Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 
 
-int[] CreateRandomArray(int size, int min, int max){
-    int[] array = new int[size];
-    for(int i = 0; i < size; i++){
-        array[i] = new Random().Next(min,max+1);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size, int min, int max){
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
 
 
-void ShowArray (int[] array){
+// void ShowArray (int[] array){
 
-    for (int i = 0; i < array.Length; i++){
-    Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+//     for (int i = 0; i < array.Length; i++){
+//     Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-int[] myArray = CreateRandomArray(5, -5, 5);
-ShowArray(myArray);
+// int[] myArray = CreateRandomArray(5, -5, 5);
+// ShowArray(myArray);
 
-int mole = 1;
+// int mole = 1;
 
-for (int i = 0; i < myArray.Length; i++)
-{
-    while (i + i < myArray.Length){
-        mole = myArray[i]* myArray[myArray.Length-i-1];
-        i ++;
-        Console.WriteLine($"сумма положительных: {mole}");
-    }
-}
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     while (i + i < myArray.Length){
+//         mole = myArray[i]* myArray[myArray.Length-i-1];
+//         i ++;
+//         Console.WriteLine($"сумма положительных: {mole}");
+//     }
+// }
+
+// SEMINAR 6
+
+// Напишите программу, которая перевернёт одномерный массив (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+// [1 2 3 4 5] -> [5 4 3 2 1]
+// [6 7 3 6] -> [6 3 7 6]
+
+
+// int[] RandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SwapArray(int[] array)
+// {
+//     int buf = 0;
+
+//     for (int i = 0; i < array.Length / 2; i++)
+//     {
+//         buf = array[i];
+//         array[i] = array[array.Length - i - 1];
+//         array[array.Length - i - 1] = buf;
+//     }
+
+//     ShowArray(array);
+// }
+
+// void SwapArray1(int[] array)
+// {
+//     int[] arr = new int[array.Length];
+
+//     for (int i = 0, j = array.Length - 1; i < array.Length; i++, j--)
+//     {
+//         arr[i] = array[j];
+//     }
+
+//     ShowArray(arr);
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] arr = RandomArray(size);
+
+// ShowArray(arr);
+
+// Console.WriteLine();
+
+// SwapArray(arr);
+
+// SwapArray1(arr);
+
+
+
+// Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
+
+
+// bool NewNum(double X, double Y, double Z)
+// {
+//     if (X < Y + Z && Y < Z + X && Z < X + Y)
+//     {
+//         return true;
+
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+// double A = new Random().NextDouble();
+// Console.WriteLine("{0:f5}", A);
+
+// double B = new Random().NextDouble();
+// Console.WriteLine("{0:f5}", B);
+
+// double C = new Random().NextDouble();
+// Console.WriteLine("{0:f5}", C);
+
+// if (NewNum(A, B, C))
+// {
+//     Console.WriteLine("треугольник существует");
+// }
+// else
+// {
+//     Console.WriteLine("треугольник не существует");
+// }
+
+
+// дополнение
+
+// bool TreangleProof(int [] arr)
+// {
+//     bool proof1 = false;
+//     bool proof2 = false;
+//     bool proof3 = false;
+
+//     if(arr[0] < arr[1] + arr[2]) proof1 = true;
+//     if(arr[1] < arr[0] + arr[2]) proof2 = true;
+//     if(arr[2] < arr[1] + arr[0]) proof3 = true;
+
+//     return proof1 && proof2 && proof3;
+// }
+
+
+// HOMEWORK6
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// Console.WriteLine("Input X : ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// string res = "";
+// while (x > 0)
+// {
+//     res = ((x % 2 == 0) ? "0" : "1") + res;
+//     x /= 2;
+// }
+// Console.Write(res);
+
+
+
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+
+
+// Console.WriteLine("Input n : ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] f = new int[n];
+// f[0] = 0;
+// f[1] = 1;
+// for (int i = 2; i < n; ++i) {
+//     f[i] = f[i - 1] + f[i - 2];
+//     Console.Write( f[i] + " ");
+// }
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+
+// Console.Write("Введите элементы(через пробел): ");
+// int[] list = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+// int count = 0;
+ 
+// for (int i = 0; i < list.Length; i++)
+// {
+//     if (list[i] > 0)
+//     {
+//         count++;
+//     }
+// }
+ 
+// Console.WriteLine($"Кол-во элементов > 0: {count}");
