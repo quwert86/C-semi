@@ -744,3 +744,413 @@
 // }
  
 // Console.WriteLine($"Кол-во элементов > 0: {count}");
+
+// Seminar 7
+
+// Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
+
+// int[,] CreateRandomArray(int m, int n, int min, int max)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++){
+//         array[i,j] = new Random().Next(min, max + 1);  
+//         }
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+
+// }
+
+
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[,] myArray = CreateRandomArray(rows, columns, min, max);
+// ShowArray(myArray);
+
+
+// Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+
+// int[,] CreateArray(int m, int n)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++){
+//         array[i,j] = i+j;  
+//         }
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[,] myArray = CreateArray(rows, columns);
+// ShowArray(myArray);
+
+
+// Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+
+// int[,] CreateRandomArray(int m, int n, int min, int max)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++){
+//         array[i,j] = new Random().Next(min, max + 1);  
+//         }
+//     }
+//     return array;
+// }
+// void ShowArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//                 if(i%2 ==0 && j%2 ==0 && i!=0 && j!=0)
+//                     Console.Write( $"|{array[i,j] }|");
+//                     else
+
+//                         Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+// void EvenArray(int[,] array)
+// {
+
+//     for (int i = 2; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 2; j < array.GetLength(1); j++){
+//             if(i%2 ==0 && j%2 ==0)
+//                 array[i,j] *= array[i,j];
+//         }
+//     }
+
+// }
+
+
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[,] myArray = CreateRandomArray(rows, columns, min, max);
+// ShowArray(myArray);
+// Console.WriteLine();
+// EvenArray(myArray);
+// ShowArray(myArray);
+
+// Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+// int[,] CreateRandomArray(int m, int n, int min, int max)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++){
+//         array[i,j] = new Random().Next(min, max + 1);  
+//         }
+//     }
+//     return array;
+// }
+// void ShowArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+// int SumNumber(int[,] array)
+// {
+// int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             if(i==j)
+//                 sum = array[i,j];
+//         }
+//     }
+//     return sum;
+// }
+
+
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[,] myArray = CreateRandomArray(rows, columns, min, max);
+// ShowArray(myArray);
+// Console.WriteLine();
+// Console.WriteLine(SumNumber(myArray));
+
+
+
+// --------------------------------------
+// HOMEWORK 7
+
+// Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+// Console.WriteLine($"Задача 47: Задайте двумерный массив размером m x n, заполненный случайными вещественными числами.");
+
+// Console.Write("Введите m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// Console.Clear();
+// Console.WriteLine($"m = {m}, n = {n}.");
+
+// double[,] array = new double[m, n];
+
+// CreateArrayDouble(array);
+
+// WriteArray(array);
+
+// Console.WriteLine();
+
+// void CreateArrayDouble(double[,] array)
+// {
+//   for (int i = 0; i < m; i++)
+//   {
+//     for (int j = 0; j < n; j++)
+//     {
+//       array[i, j] = new Random().NextDouble() * 20 - 10;
+//     }
+//   }
+// }
+
+// void WriteArray (double[,] array){
+// for (int i = 0; i < m; i++)
+//   {
+//       for (int j = 0; j < n; j++)
+//       {
+//         double alignNumber = Math.Round(array[i, j], 1);
+//         Console.Write(alignNumber + " ");
+//       }
+//       Console.WriteLine();
+//   }
+// }
+
+// Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// 1, 7 -> такого числа в массиве нет
+
+
+// int[,] CreateRandomArray(int m, int n, int min, int max)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++){
+//         array[i,j] = new Random().Next(min, max + 1);  
+//         }
+//     }
+//     return array;
+// }
+
+// void ShowArray(int[,] array)
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++){
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+
+// }
+
+// int LocalElemInTaple(int[,] array)
+// {
+// Console.WriteLine("indexI: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("indexJ: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+//     Console.Write(array[a,b] + " ");
+//     return array[a,b];
+// }
+
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter min: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter max: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[,] myArray = CreateRandomArray(rows, columns, min, max);
+// ShowArray(myArray);
+// LocalElemInTaple(myArray);
+
+
+// Задача 52: Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+
+// Console.Write("Введите m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// Console.Clear();
+// Console.WriteLine($"m = {m}, n = {n}.");
+
+// double[,] array = new double[m, n];
+
+// CreateArrayDouble(array);
+
+// WriteArray(array);
+
+// Console.WriteLine();
+
+// void CreateArrayDouble(double[,] array)
+// {
+//   for (int i = 0; i < m; i++)
+//   {
+//     for (int j = 0; j < n; j++)
+//     {
+//       array[i, j] = new Random().NextDouble() * 20 - 10;
+//     }
+//   }
+// }
+
+// void WriteArray (double[,] array){
+// for (int i = 0; i < m; i++)
+//   {
+//       for (int j = 0; j < n; j++)
+//       {
+//         double alignNumber = Math.Round(array[i, j], 1);
+//         Console.Write(alignNumber + " ");
+//       }
+//       Console.WriteLine();
+//   }
+// }
+
+
+// int[,] arrayWhole = new int[m, n];
+// arrayWhole = TransformationArrayWhole(array);
+
+// WriteArrayInt(arrayWhole);
+
+// Console.Write($"\nCреднее арифметическое:\n");
+// for (int i = 0; i < n; i++)
+// {
+//   double arithmeticMean = 0;
+//   for (int j = 0; j < m; j++)
+//   {
+//     arithmeticMean += arrayWhole[j, i];
+//   }
+//   arithmeticMean = Math.Round(arithmeticMean / m, 1);
+//   Console.WriteLine($"столбца № {i+1} {arithmeticMean}");
+// }
+
+// int[,] TransformationArrayWhole (double[,] array)
+// {
+//   int[,] arrayWhole = new int[array.GetLength(0), array.GetLength(1)];
+//   for (int i = 0; i < array.GetLength(0); i++)
+//   {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//       arrayWhole[i, j] = Convert.ToInt32(array[i, j]);
+//     }
+//   }
+//   return arrayWhole;
+// }
+
+// void WriteArrayInt (int[,] arrayWhole){
+// for (int i = 0; i < m; i++)
+//   {
+//       for (int j = 0; j < n; j++)
+//       {
+//         Console.Write(arrayWhole[i, j] + " ");
+//       }
+//       Console.WriteLine();
+//   }
+// }
