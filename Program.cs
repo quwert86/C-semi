@@ -1489,40 +1489,150 @@
 
 // Задача 62: Заполните спирально массив 4 на 4.
 
-int n = 4;
-int[,] sqareMatrix = new int[n, n];
+// int n = 4;
+// int[,] sqareMatrix = new int[n, n];
 
-int temp = 1;
-int i = 0;
-int j = 0;
+// int temp = 1;
+// int i = 0;
+// int j = 0;
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+// while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+// {
+//   sqareMatrix[i, j] = temp;
+//   temp++;
+//   if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
+//     j++;
+//   else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
+//     i++;
+//   else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
+//     j--;
+//   else
+//     i--;
+// }
+
+// WriteArray(sqareMatrix);
+
+// void WriteArray (int[,] array)
+// {
+//   for (int i = 0; i < array.GetLength(0); i++)
+//   {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//       if (array[i,j] / 10 <= 0)
+//       Console.Write($" {array[i,j]} ");
+
+//       else Console.Write($"{array[i,j]} ");
+//     }
+//     Console.WriteLine();
+//   }
+// }
+
+
+// SEMINAR 9
+// ---------------------------------------------
+
+// Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+
+// string PrintNumbers(int start, int end)
+// {
+//     if (start == end) return start.ToString();
+//     return (start + " " + PrintNumbers(start + 1, end));
+// }
+
+
+// Console.Clear();
+// Console.Write("Введите M: ");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.Clear();
+// Console.Write("Введите N: ");
+// int n = int.Parse(Console.ReadLine());
+
+// Console.WriteLine(PrintNumbers(m, n));
+// int start = 1;
+// while (start <= n)
+// {
+//     Console.Write($"{start ++}");
+// }
+
+// for (int i = 0; i < n; i++)
+// {
+//     Console.Write($"{i}");
+// }
+
+
+// Напишите программу, которая будет принимать на вход
+// число и возвращать сумму его цифр.
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.WriteLine($"{m}->{SumNumbers(m)}");
+
+// int SumNumbers(int number)
+// {
+// if (number == 0) return 0;
+// return (number % 10 + SumNumbers(number / 10));
+// }
+
+
+// HOMEWORK 9
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+// int m = InputNumbers("Введите m: ");
+// int n = InputNumbers("Введите n: ");
+// int temp = m;
+
+// if (m > n) 
+// {
+//   m = n; 
+//   n = temp;
+// }
+
+// PrintSumm(m, n, temp=0);
+
+// void PrintSumm(int m, int n, int summ)
+// {
+//   summ = summ + n;
+//   if (n <= m)
+//   {
+//     Console.Write($"Сумма элементов= {summ} ");
+//     return;
+//   }
+//   PrintSumm(m, n - 1, summ);
+// }
+
+// int InputNumbers(string input) 
+// {
+//   Console.Write(input);
+//   int output = Convert.ToInt32(Console.ReadLine());
+//   return output;
+// }
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+int m = InputNumbers("Введите m: ");
+int n = InputNumbers("Введите n: ");
+
+int functionAkkerman = Ack(m, n);
+
+Console.Write($"Функция Аккермана = {functionAkkerman} ");
+
+int Ack(int m, int n)
 {
-  sqareMatrix[i, j] = temp;
-  temp++;
-  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
-    j--;
-  else
-    i--;
+  if (m == 0) return n + 1;
+  else if (n == 0) return Ack(m - 1, 1);
+  else return Ack(m - 1, Ack(m, n - 1));
 }
 
-WriteArray(sqareMatrix);
-
-void WriteArray (int[,] array)
+int InputNumbers(string input) 
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-      if (array[i,j] / 10 <= 0)
-      Console.Write($" {array[i,j]} ");
-
-      else Console.Write($"{array[i,j]} ");
-    }
-    Console.WriteLine();
-  }
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
 }
